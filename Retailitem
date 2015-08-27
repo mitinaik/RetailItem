@@ -1,0 +1,61 @@
+# RetailItem
+//Miti Naik
+//july 31 2015
+
+public class RetailItem
+{
+private String description;
+private int unitsOnHand;
+private double Price;
+public RetailItem()
+{
+   description = "";
+   unitsOnHand = 0;
+   Price = 0.0;
+}
+public RetailItem(String d, int u, double p)
+{
+d = description;
+u = unitsOnHand;
+p = Price;
+
+
+}
+//mutator methods
+   public void setDescription(String description)
+   {this.description = description;}
+   public void setunitsonhand( int unitsOnHand)
+   { this.unitsOnHand = unitsOnHand;}
+   public void setPrice( double Price)
+   { this.Price = Price;}
+   
+   //accessor methods
+   public String getDescription()
+   { return description;}
+   public int getunitsonhand()
+   { return unitsOnHand;}
+   public double getPrice()
+   { return Price;}
+   
+   // Exceprion that throws negative price
+   public  void Price(double Price) throws NegativePrice
+   {
+   if (Price < 0)
+      throw new NegativePrice(Price);
+      this.Price = Price;
+   
+   }
+   public void unitsOnHand(int unitsOnHand) throws NegativeUnitonHand
+   {
+   if (unitsOnHand < 0)
+      throw new NegativeUnitonHand(unitsOnHand);
+      this.unitsOnHand = unitsOnHand;
+    }
+    
+    
+   
+
+
+
+
+}
