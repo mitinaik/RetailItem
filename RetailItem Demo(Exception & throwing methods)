@@ -1,0 +1,48 @@
+# RetailItem
+//Miti Naik
+//july 31 2015
+import java.util.Scanner;
+
+public class RetailitemDemo
+{
+   public static void main(String[] args)
+   
+   {
+   try
+   {
+      Scanner keyboard = new Scanner(System.in);
+      String description;
+      int unitsOnHand;
+      double Price;
+      // ask  users to enter the  file
+      
+      System.out.print(" Enter the description of the item");
+      description = keyboard.nextLine();
+      
+      //create an item object
+      RetailItem item = new RetailItem();
+      item.setDescription(description);
+      
+      
+      System.out.print(" Enter the price of the item");
+      Price = keyboard.nextDouble();
+      
+      //call Rtailitem class price method
+      item.Price(Price);
+      
+      System.out.print(" Enter the number of units on hand:");
+      unitsOnHand = keyboard.nextInt();
+      
+      item.unitsOnHand(unitsOnHand);
+      
+      }
+      catch(NegativePrice e)
+      {  System.out.println(e.getMessage()); }
+      catch (NegativeUnitonHand e)
+      {  System.out.println(e.getMessage()); }
+      
+      
+   
+   
+   }
+}
