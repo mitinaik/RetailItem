@@ -1,0 +1,14 @@
+# RetailItem
+//Miti Naik
+//july 31 2015
+public class NegativePrice extends Exception
+{
+   public NegativePrice()
+   {
+      super(" Error: Negative price");
+   }
+   public NegativePrice(double price)
+   {
+   super (" Error: Negative price amount " + price);
+   }
+}
