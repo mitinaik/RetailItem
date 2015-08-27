@@ -1,0 +1,15 @@
+# RetailItem
+//Miti Naik
+//july 31 2015
+
+public class NegativeUnitonHand extends Exception
+{
+   public NegativeUnitonHand()
+   { 
+   super(" Error: Negative units on hand");
+   }
+   public NegativeUnitonHand( int unitsOnHand)
+   {
+   super("Error: Negative units on hand amount "+ unitsOnHand);
+   }
+ }
